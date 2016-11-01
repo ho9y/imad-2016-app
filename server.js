@@ -13,13 +13,6 @@ var articleOne={title:'Article one i tanmai Gopal',
                 date:'Sep 5, 2016',
                 content:`<p>this is content for my first article.</p>`};
                 
-    
-    
-
-
-
-
-
 
 function createTemplate(data){
 var title=data.title;
@@ -56,9 +49,6 @@ var htmlTemplate =
          return htmlTemplate;
          
 }
-
-
-
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
