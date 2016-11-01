@@ -63,15 +63,11 @@ var htmlTemplate =
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one',function(req,res){
-    res.send(createTemplate(articleOne));});
+app.get('/:articlename',function(req,res){
+    var articlename=req.params.articlename;
+    res.send(createTemplate(articles[articlename]));});
 
-app.get('/article-two',function(req,res){
-    res.send(createTemplate(articleTwo));});
-    
-app.get('/article-three',function(req,res){
-    res.send(createTemplate(articleThree));});
-    
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
