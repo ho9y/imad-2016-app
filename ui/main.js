@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById('main-text');
-element.innerHTML = "new value";
+element.innerHTML = "Stay tuned..";
 var img= document.getElementById('madi');
 
 
