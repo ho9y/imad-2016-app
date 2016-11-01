@@ -4,12 +4,20 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articleOne={title:'Article one i tanmai Gopal',
+var articles={ articleOne:{title:'Article one i tanmai Gopal',
                 heading:'Article One',
                 date:'Sep 5, 2016',
-                content:`<p>this is content for my first article.</p>`};
-                
+                content:`<p>this is content for my first article.</p>`},
 
+articleTwo:{title:'Article one i tanmai Gopal',
+                heading:'Article One',
+                date:'Sep 5, 2016',
+                content:`<p>this is content for my first article.</p>`},
+articleThree:{title:'Article one i tanmai Gopal',
+                heading:'Article One',
+                date:'Sep 5, 2016',
+                content:`<p>this is content for my first article.</p>`}
+};
 function createTemplate(data){
 var title=data.title;
 var date=data.date;
@@ -45,7 +53,7 @@ var htmlTemplate =
          return htmlTemplate;
          
 }
-
+ 
 
 
 
@@ -58,7 +66,11 @@ app.get('/', function (req, res) {
 app.get('/article-one',function(req,res){
     res.send(createTemplate(articleOne));});
 
-
+app.get('/article-two',function(req,res){
+    res.send(createTemplate(articleTwo));});
+app.get('/article-three',function(req,res){
+    res.send(createTemplate(articleThree));});
+    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
