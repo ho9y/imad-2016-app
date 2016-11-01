@@ -9,14 +9,14 @@ var articles={ articleOne:{title:'Article one i tanmai Gopal',
                 date:'Sep 5, 2016',
                 content:`<p>this is content for my first article.</p>`},
 
-articleTwo:{title:'Article one i tanmai Gopal',
-                heading:'Article One',
+articleTwo:{title:'2nd article i tanmai Gopal',
+                heading:'Article 2',
                 date:'Sep 5, 2016',
-                content:`<p>this is content for my first article.</p>`},
-articleThree:{title:'Article one i tanmai Gopal',
-                heading:'Article One',
+                content:`<p>this is content for my 2nd article.</p>`},
+articleThree:{title:' 3rd article i tanmai Gopal',
+                heading:'Article 3',
                 date:'Sep 5, 2016',
-                content:`<p>this is content for my first article.</p>`}
+                content:`<p>this is content for my 3rd article.</p>`}
 };
 function createTemplate(data){
 var title=data.title;
@@ -68,6 +68,7 @@ app.get('/article-one',function(req,res){
 
 app.get('/article-two',function(req,res){
     res.send(createTemplate(articleTwo));});
+    
 app.get('/article-three',function(req,res){
     res.send(createTemplate(articleThree));});
     
