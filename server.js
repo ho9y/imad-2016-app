@@ -21,7 +21,6 @@ var articleOne={title:'Article one i tanmai Gopal',
 
 
 
-
 function createTemplate(data){
 var title=data.title;
 var date=data.date;
