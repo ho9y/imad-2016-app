@@ -30,7 +30,7 @@ var submit = document.getElementById('submit_btn');
 submit.onclick=function(){
    var request = new XMLHttpRequest();
       request.onreadystatechange = function(){
-          if(request.reradyState === XMLHttpRequest.DONE){
+          if(request.readyState === XMLHttpRequest.DONE){
               if(request.status === 200){ var names= request.responseText;
               names = JSON.parse(names);
     var list = '';
