@@ -91,7 +91,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
  
- app.get('/profile',function(req,res){
+ app.get('/proffile',function(req,res){
    res.send('profile will be served here'); 
      })
      
