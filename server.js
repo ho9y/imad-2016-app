@@ -92,8 +92,8 @@ app.get('/ui/main.js', function (req, res) {
 });
  
  app.get('/profile',function(req,res){
-   res.send('profile will be served here'); 
-     })
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+     });
      
      
 app.get('/ui/madi.png', function (req, res) {
