@@ -19,9 +19,7 @@ var articles={ 'article-one':{title:'Article one i tanmai Gopal',
                 content:`<p>this is content for my 3rd article.</p>`}
 };
 
- app.get('/profile',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-     });
+
 function createTemplate(data){
 var title=data.title;
 var date=data.date;
