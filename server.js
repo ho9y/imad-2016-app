@@ -4,16 +4,6 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var name = [];
- app.get('/submit-name/name',function(req,res){
-     var name = req.query.name;
-     names.push(name);
-     //jason
-     res.send(JSON.stringify(names));
-     
-     
- });
-
 var articles={ 'article-one':{title:'Article one i tanmai Gopal',
                 heading:'Article One',
                 date:'Sep 5, 2016',
@@ -83,6 +73,15 @@ app.get('/counter',function(req,res){
     counter = counter + 1;
     res.send(counter.toString());
 });
+var name = [];
+ app.get('/submit-name/name',function(req,res){
+     var name = req.query.name;
+     names.push(name);
+     //jason
+     res.send(JSON.stringify(names));
+     
+     
+ });
 
 app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
