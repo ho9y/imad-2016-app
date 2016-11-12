@@ -5,15 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
- app.get('/submit-name',function(req,res){
-     var name = req.query.name;
-     names.push(name);
-     //jason
-     res.send(JSON.stringify(names));
-     
-     
- });
- 
+
 var articles={ 'article-one':{title:'Article one i tanmai Gopal',
                 heading:'Article One',
                 date:'Sep 5, 2016',
@@ -83,7 +75,16 @@ app.get('/counter',function(req,res){
     counter = counter + 1;
     res.send(counter.toString());
 });
-
+var name = [];
+ app.get('/submit-name',function(req,res){
+     var name = req.query.name;
+     names.push(name);
+     //jason
+     res.send(JSON.stringify(names));
+     
+     
+ });
+ 
 
 app.get('/:articleName',function(req,res){
     var articleName=req.params.articleName;
@@ -102,7 +103,6 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-var name = [];
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
