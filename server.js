@@ -62,6 +62,9 @@ CSS is one of the core languages of the open web and has a standardized W3C spec
  app.get('/profile',function(req,res){
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
      });
+     app.get('/whatsapp-button',function(req,res){
+  res.sendFile(path.join(__dirname, 'ui', 'whatsapp-button.js'));
+     });
 function createTemplate(data){
 var title=data.title;
 var date=data.date;
